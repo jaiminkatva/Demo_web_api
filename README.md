@@ -2,7 +2,7 @@
 This is a Demo api for my web site. this is created in node, mysql and sequelize, Rigth now i add only one model that is a admin i update this repository daily with new models. I will create complete crud api with relations .
 
 
-you must install to run this api is
+you must install packages for run this api is : 
 1. express
 2. seqeulize
 3. mysql2
