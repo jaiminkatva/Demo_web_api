@@ -25,6 +25,9 @@ app.use("/admin", adminRouter)
 app.use("/category", categoryRouter)
 app.use("/product", productRouter)
 
+// static image folder 
+app.use('/images', express.static('./images'))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
