@@ -4,6 +4,8 @@ This is a Demo api for my web site. this is created in node, mysql and sequelize
 many products one category (one to many).
 one category one product (one to one).
 
+for the use of multer i uploed file in this api. for uploading image you must require multer and path in your controller, i add product_image field in product table and for the use of multer i upload product image in this api/
+
 you must install packages for run this api is : 
 1. express = npm i --save express
 2. sequelize = npm i --save sequelize
