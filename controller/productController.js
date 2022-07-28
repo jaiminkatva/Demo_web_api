@@ -1,4 +1,6 @@
 const db = require("../model")
+
+// file upload packages
 const multer = require('multer')
 const path = require('path')
 
@@ -13,7 +15,7 @@ const addProduct = async(req, res) => {
         product_price: req.body.product_price,
         product_desc: req.body.product_desc,
         category_id: req.body.category_id,
-        product_image: req.file.path
+        Image: req.file
     }
     const product = await Product.create(data)
     res.status(200).send(product)
@@ -65,7 +67,6 @@ const oneToone = async(req, res) => {
     res.status(200).send(data)
 }
 
-// file upload 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'images')
@@ -75,19 +76,6 @@ const storage = multer.diskStorage({
     }
 })
 
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: '5000000' },
-    fileFilter: (req, file, cb) => {
-        const fileTypes = /jpeg|jpg|png|gif/
-        const mimeType = fileTypes.test(file.mimetype)
-        const extname = fileTypes.test(path.extname(file.originalname))
-
-        if (mimeType && extname) {
-            return cb(null, true)
-        }
-        cb("give proper file formate to upload")
-    }
-}).single('product_image')
+const upload = multer({ storage: storage })
 
 module.exports = { addProduct, getProduct, getOneProduct, updateProduct, deleteProduct, oneToone, upload }

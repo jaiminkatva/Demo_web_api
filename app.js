@@ -11,9 +11,11 @@ const adminRouter = require("./routes/adminRouter")
 const categoryRouter = require("./routes/categoryRouter")
 const productRouter = require("./routes/productRouter")
 
+// static image folder 
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,8 +27,8 @@ app.use("/admin", adminRouter)
 app.use("/category", categoryRouter)
 app.use("/product", productRouter)
 
-// static image folder 
-app.use('/images', express.static('./images'))
+// static images folder 
+app.use("/images", express.static('./images'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

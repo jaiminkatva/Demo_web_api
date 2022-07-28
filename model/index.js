@@ -40,6 +40,7 @@ db.sequelize.sync({ force: false })
     })
 
 // one to many relation between category and product
+
 db.category.hasMany(db.product, {
     foreignKey: 'category_id',
     as: 'product-info',
