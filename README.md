@@ -1,14 +1,12 @@
-# myWebsite_api
-This is a Demo api for my web site. this is created in node, mysql and sequelize, I add models like Admin, Category and Product. I created complete crud api with relations.
+Demo web api is a simple api of sequelize mysql2.
 
-many products one category (one to many).
-one category one product (one to one).
+In this api we store data using Mysql database.
 
-for the use of multer i uploed file in this api. for uploading image you must require multer and path in your controller, i add product_image field in product table and for the use of multer i upload product image in this api/
+There are three models. 
+1. Admin
+2. Category
+3. Product
 
-you must install packages for run this api is : 
-1. express = npm i --save express
-2. sequelize = npm i --save sequelize
-3. mysql2 = npm i --save mysql2
-4. nodemon (for automatically restart your server) = npm i --save nodemon
-5. multer (for file upload) = npm i --save multer
+Main purpose to bield this api is clear CRUD opration using mysql database and show relationship between 2 tables.
+
+In this project done one to many api and simple crud operation using express, sequelize, mysql.
