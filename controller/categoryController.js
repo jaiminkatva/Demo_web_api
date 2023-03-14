@@ -49,7 +49,7 @@ const deleteCategory = async(req, res) => {
     res.status(200).send(`category deleted successfully id is ${id}`)
 }
 
-// on to many
+// one to many
 const oneToMany = async(req, res) => {
 
     const data = await Category.findAll({
