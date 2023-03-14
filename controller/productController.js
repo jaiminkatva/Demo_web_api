@@ -56,6 +56,7 @@ const deleteProduct = async(req, res) => {
     res.status(200).send(`Product deleted successfully`)
 }
 
+// one to one relation {product have a one category}
 const oneToone = async(req, res) => {
 
     const data = await Product.findAll({
@@ -76,6 +77,7 @@ const storage = multer.diskStorage({
     }
 })
 
+// file upload api
 const upload = multer({ storage: storage })
 
 module.exports = { addProduct, getProduct, getOneProduct, updateProduct, deleteProduct, oneToone, upload }
