@@ -1,4 +1,4 @@
-Demo web api is a simple api of sequelize mysql2.
+Demo web api is a simple api using nodejs, express, squelize, mysql2.
 
 In this api we store data using Mysql database.
 
